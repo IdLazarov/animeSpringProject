@@ -8,9 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
-import com.animeProject.animeProject.models.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class FavouriteAnime implements Serializable{
@@ -26,6 +25,8 @@ public class FavouriteAnime implements Serializable{
 	private String author;
 	
 	private String favouriteCharacter;
+	
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User owner;
 	

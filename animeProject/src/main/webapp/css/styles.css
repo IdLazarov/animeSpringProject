@@ -21,8 +21,18 @@ body{
     }
 }
 
-
-.container-fluid{
+#container-favourite-anime{
+    background-color: crimson;
+    background-image: url("../css/images/3432.jpg");
+    border-radius: 25px;
+    height: 700px;
+    overflow:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+    
+}
+#anime-container-genre{
     background-color: crimson;
     border-radius: 25px;
     height: 500px;
@@ -115,7 +125,30 @@ ul{
     font-weight: bold;
 }
 
-/* #favourite-anime-card-body{
-    column-gap: 20px;
-   
-} */
+#favourite-anime-template{
+    background-image: url("../css/images/anime-background-1.jpg");
+    background-color: red;
+    
+}
+
+#template-output{
+    background-color: slateblue;
+}
+
+#character-creation{
+    background-color: black;
+    background-image: url("../css/images/3432.jpg");
+    background-repeat: no-repeat;
+    font-weight: bold;
+    background-position: center;
+    margin: 7px;
+}
+
+#character-card{
+    text-transform: capitalize;
+    background-image: url("../css/images/823751.jpg");
+    background-repeat: no-repeat;
+    margin: 7px;
+    font-weight: bold;
+    background-position: center;
+}

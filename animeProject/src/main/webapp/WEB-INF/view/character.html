@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watashi no Anime</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-danger" href="/">Watashi no Anime</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto float-right">
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" value="animes" id="getAnimes" href="anime.html">Anime</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="myFavourites.html">Favourites</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Character</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </nav>
+    <div class="container-fluid"></div>
+    <div class="row mt-5">
+
+
+        <div class="col">
+            <div class="card" id="character-creation">
+                <div class="card-header">Input your new character idea</div>
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col">
+
+                            <label for="select-name">Chose character name:</label>
+                            <div class="input-group mb-3">
+
+                                <input type="text" id="new-char-name" class="form-control" placeholder="Character Name"
+                                    aria-label="Charactername" aria-describedby="basic-addon1">
+                            </div>
+                            <label for="select-age">Chose character age:</label>
+                            <div class="input-group mb-3">
+
+                                <input type="text" id="new-char-age" class="form-control" placeholder="Character Age"
+                                    aria-label="Charactername" aria-describedby="basic-addon1">
+                            </div>
+                            <label for="select-anime">Chose anime for your character:</label>
+                            <div class="input-group mb-3">
+
+                                <input type="text" id="new-char-anime" class="form-control"
+                                    placeholder="Anime for the character" aria-label="Charactername"
+                                    aria-describedby="basic-addon1">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="comment">Character description:</label>
+                                <textarea class="form-control" rows="5" id="description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                    <button id="create-character" type="button" class="btn btn-primary">Create your character
+                        idea</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+
+            <ul class="list-group justify-content-center" id="character-template-place">
+
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    <li class="list-group-item d-none mt-2 justify-content-center" id="character-template">
+        <div class="card" id="character-card" style="width: 20rem;">
+            <div class="card-header">This is your new character idea</div>
+            <div class="card-body">
+                <label for="char-name">Character with name:</label>
+                <h5 class="card-title" id="character-name"></h5>
+                <label for="char-age">and age:</label>
+                <p class="card-text" id="character-age"></p>
+                <label for="char-anime">will fit in:</label>
+                <p class="card-text" id="character-anime"></p>
+                <label for="char-description">He is:</label>
+                <textarea class="form-control" rows="5" id="description-ready"></textarea>
+            </div>
+            <div class="card-footer">
+                <button data-toggle="modal" data-target="#confirmDeleteModal" type="button"
+                    class="btn btn-danger remove-item">Remove character idea</button>
+            </div>
+
+        </div>
+
+
+    </li>
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete this character</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Are you sure about that?!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="confirm-delete" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="../../js/createdCharacter.js"></script>
+</body>
+
+</html>

@@ -12,6 +12,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
@@ -31,10 +34,12 @@ public class User implements Serializable{
 	private String password;
 	@Column(name = "email",nullable = false,unique = true)
 	private String email;
-	@OneToMany(mappedBy = "owner",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "owner",cascade = CascadeType.ALL)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<FavouriteAnime> favouriteAnime;
 	
-	@OneToMany(mappedBy = "owner",fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "owner",cascade = CascadeType.ALL)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<FavouriteCharacter> favouriteCharacter;
 	
 	

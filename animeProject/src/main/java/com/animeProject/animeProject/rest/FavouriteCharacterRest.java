@@ -31,7 +31,7 @@ public class FavouriteCharacterRest {
 		this.userRepo = userRepo;
 	}
 	
-	
+
 	
 	@PostMapping("/addFavouriteCharacter")
 	public ResponseEntity<FavouriteCharacter> addFavouriteCharacter(
@@ -39,17 +39,18 @@ public class FavouriteCharacterRest {
 		@RequestParam(name = "name") String  name,
 		@RequestParam(name = "age") String age,
 		@RequestParam(name = "anime") String  anime,
+		@RequestParam(name = "description") String description,
 		HttpSession session){
 		
 			final User user = (User) session.getAttribute("currentUser");
 			if (null == user) {
 				return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
 			}
-	final FavouriteCharacter favouriteCharacter = new FavouriteCharacter(name,age,anime);
+	final FavouriteCharacter favouriteCharacter = new FavouriteCharacter(name,age,anime,description);
 	favouriteCharacter.setOwner(user);
 	user.addFavouriteCharacter(favouriteCharacter);
 	
-	session.setAttribute("currentuser", userRepo.save(user));
+	session.setAttribute("currentuser", favCharacterRepo.save(favouriteCharacter));
 	
 	return ResponseEntity.ok(favouriteCharacter);
 	}

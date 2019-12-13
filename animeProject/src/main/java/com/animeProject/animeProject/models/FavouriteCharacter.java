@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 public class FavouriteCharacter implements Serializable{
@@ -23,6 +25,8 @@ public class FavouriteCharacter implements Serializable{
 	private String name;
 	private String age;
 	private String anime;
+	private String description;
+	@JsonIgnore
 	@ManyToOne(fetch = FetchType.EAGER)
 	private User owner;
 	
@@ -31,11 +35,12 @@ public class FavouriteCharacter implements Serializable{
 		
 	}
 
-	public FavouriteCharacter(String name, String age, String anime) {
+	public FavouriteCharacter(String name, String age, String anime,String description) {
 		
 		this.name = name;
 		this.age = age;
 		this.anime = anime;
+		this.description = description;
 	}
 
 	public int getId() {
@@ -76,6 +81,14 @@ public class FavouriteCharacter implements Serializable{
 
 	public void setOwner(User owner) {
 		this.owner = owner;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	

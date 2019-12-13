@@ -10,4 +10,5 @@ public class AnimeProjectApplication {
 		SpringApplication.run(AnimeProjectApplication.class, args);
 	}
 
+	
 }
