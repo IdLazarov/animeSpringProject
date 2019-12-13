@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watashi no Anime</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-danger" href="/">Watashi no Anime</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto float-right">
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" value="animes" id="getAnimes" href="anime.html">Anime</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="#">Favourites</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    One piece
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/one-piece.jpg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+
+                        <p class="author">Author: Eichiro Oda</p>
+                    </div>
+
+                    <div class="col">
+                        <p class="start-year">Year of creation: 1997</p>
+                    </div>
+
+                    <div class="col">
+
+
+                        <label for="select-city">Chose character:</label> <select id="select-character"
+                            class="custom-select">
+                            <option value="Monkey D. Luffy">Monkey D. Luffy</option>
+                            <option value="Roronoa Zoro">Roronoa Zoro</option>
+                            <option value="Nami">Nami</option>
+                            <option value="Usopp">Usopp</option>
+                            <option value="Vinsmoke Sanji">Vinsmoke Sanji</option>
+                            <option value="Tony Tony Chopper">Tony Tony Chopper</option>
+                            <option value="Nico Robin">Nico Robin</option>
+                            <option value="Franky">Franky</option>
+                            <option value="Brook">Brook</option>
+                            <option value="Jimbei">Jimbei</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite-one-piece">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Naruto Shippuuden
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/P5904.jpg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Masashi Kishimoto</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of creation: 1999</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                <a class="dropdown-item" href="#">Naruto Uzumaki</a>
+                                <a class="dropdown-item" href="#">Sasuke Uchiha</a>
+                                <a class="dropdown-item" href="#">Sakura Haruno</a>
+                                <a class="dropdown-item" href="#">Kakashi Hatake</a>
+                                <a class="dropdown-item" href="#">Hinata Hyuga</a>
+                                <a class="dropdown-item" href="#">Shikamaru Nara</a>
+                                <a class="dropdown-item" href="#">Rock Lee</a>
+                                <a class="dropdown-item" href="#">Might Guy</a>
+                                <a class="dropdown-item" href="#">Gaara</a>
+                                <a class="dropdown-item" href="#">Madara Uchiha</a>
+                                <a class="dropdown-item" href="#">Jiraiya</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Fairy tail
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/91-fiTNFIQL._RI_.jpg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Hiro Mashima</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of creation: 2006</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Natsu Dragneel</a>
+                                <a class="dropdown-item" href="#">Lucy Heartfilia</a>
+                                <a class="dropdown-item" href="#">Happy</a>
+                                <a class="dropdown-item" href="#">Gray Fullbuster</a>
+                                <a class="dropdown-item" href="#">Erza Scarlet</a>
+                                <a class="dropdown-item" href="#">Wendy Marvell</a>
+                                <a class="dropdown-item" href="#">Carla</a>
+                                <a class="dropdown-item" href="#">Zeref</a>
+                                <a class="dropdown-item" href="#">Mavis Vermillion</a>
+                                <a class="dropdown-item" href="#">Makarov Dreyar</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">Your favourites</div>
+                <div class="card-body">
+                    <ul id="comments-list" class="list-group">
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Boku no hero academia
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/boku_no_marvel.jpg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Kōhei Horikoshi</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2014</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Izuku Midoriya</a>
+                                <a class="dropdown-item" href="#">Katsuki Bakugo</a>
+                                <a class="dropdown-item" href="#">Ochaco Uraraka</a>
+                                <a class="dropdown-item" href="#">Tenya Iida </a>
+                                <a class="dropdown-item" href="#">Shoto Todoroki</a>
+                                <a class="dropdown-item" href="#">Tsuyu Asui</a>
+                                <a class="dropdown-item" href="#">Eijirō Kirishima</a>
+                                <a class="dropdown-item" href="#">Mirio Togata</a>
+                                <a class="dropdown-item" href="#">Tamaki Amajiki</a>
+                                <a class="dropdown-item" href="#">Nejire Hado</a>
+                                <a class="dropdown-item" href="#">Shōta Aizawa</a>
+                                <a class="dropdown-item" href="#">Toshinori Yagi</a>
+                                <a class="dropdown-item" href="#">Enji Todoroki</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    One punch man
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img
+                            src="../../css/images/463e0e9d691b7d1c222222945366666ecfdb0.jpg" class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Yusuke Murata</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2012</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Saitama</a>
+                                <a class="dropdown-item" href="#">Genos</a>
+                                <a class="dropdown-item" href="#">Tatsumaki</a>
+                                <a class="dropdown-item" href="#">Bang</a>
+                                <a class="dropdown-item" href="#">King</a>
+                                <a class="dropdown-item" href="#">Blast</a>
+                                <a class="dropdown-item" href="#">Atomic samurai</a>
+                                <a class="dropdown-item" href="#">Pig God</a>
+                                <a class="dropdown-item" href="#">Metal knight</a>
+                                <a class="dropdown-item" href="#">Watchdog man</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Nanatsu no taizai
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/Unjust_Sin_3DS_-_Box_Art.png"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Nakaba Suzuki</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2012</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Meliodas</a>
+                                <a class="dropdown-item" href="#">Ban</a>
+                                <a class="dropdown-item" href="#">Elizabeth Liones</a>
+                                <a class="dropdown-item" href="#">Hawk</a>
+                                <a class="dropdown-item" href="#">Diane</a>
+                                <a class="dropdown-item" href="#">King(Elfs)</a>
+                                <a class="dropdown-item" href="#">Gowther</a>
+                                <a class="dropdown-item" href="#">Merlin</a>
+                                <a class="dropdown-item" href="#">Escanor</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+
+        </div>
+
+
+    </div>
+
+    <div class="row mt-2">
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Hunter x Hunter
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img
+                            src="../../css/images/Hunter-x-Hunter-Greed-Adventure-Ends-Service-Siliconera.jpg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Yoshihiro Togashi</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 1998</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Gon Freecss</a>
+                                <a class="dropdown-item" href="#">Killua Zoldyck</a>
+                                <a class="dropdown-item" href="#">Kurapika</a>
+                                <a class="dropdown-item" href="#">Leorio Paradinight </a>
+                                <a class="dropdown-item" href="#">Hisoka Morow</a>
+                                <a class="dropdown-item" href="#">Chrollo Lucilfer</a>
+                                <a class="dropdown-item" href="#">Meruem</a>
+                                <a class="dropdown-item" href="#">Isaac Netero</a>
+                                <a class="dropdown-item" href="#">Ging Freecss</a>
+                                <a class="dropdown-item" href="#">Hanzo</a>
+                                <a class="dropdown-item" href="#">Ponzu</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Bleach
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img
+                            src="../../css/images/Bleach-Awakened-Souls-feature-image.jpg" class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Tite Kubo</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2001</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Ichigo Kurosaki</a>
+                                <a class="dropdown-item" href="#">Orihime Inoue</a>
+                                <a class="dropdown-item" href="#">Renji Abarai</a>
+                                <a class="dropdown-item" href="#">Rukia Kuchiki</a>
+                                <a class="dropdown-item" href="#">Uryū Ishida</a>
+                                <a class="dropdown-item" href="#">Yasutora "Chad" Sado</a>
+                                <a class="dropdown-item" href="#">Sōsuke Aizen</a>
+                                <a class="dropdown-item" href="#">Kisuke Urahara</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Death note
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/1-3.jpg" class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Tsugumi Ohba</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2003</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Light Yagami</a>
+                                <a class="dropdown-item" href="#">L Lawliet</a>
+                                <a class="dropdown-item" href="#">Ryuk</a>
+                                <a class="dropdown-item" href="#">Misa Amane</a>
+                                <a class="dropdown-item" href="#">Near</a>
+                                <a class="dropdown-item" href="#">Mello</a>
+                                <a class="dropdown-item" href="#">Teru Mikami</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+
+        </div>
+
+
+    </div>
+
+    <div class="row mt-2 mb-5">
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Black clover
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img src="../../css/images/Slider_-_Main.png"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Yūki Tabata</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of creation: 2015</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Asta</a>
+                                <a class="dropdown-item" href="#">Yuno</a>
+                                <a class="dropdown-item" href="#">Noelle Silva</a>
+                                <a class="dropdown-item" href="#">Julius Novachrono</a>
+                                <a class="dropdown-item" href="#">Yami Sukehiro</a>
+                                <a class="dropdown-item" href="#">Finral Roulacase</a>
+                                <a class="dropdown-item" href="#">Magna Swing</a>
+                                <a class="dropdown-item" href="#">Luck Voltia</a>
+                                <a class="dropdown-item" href="#">Gauche Adlai</a>
+                                <a class="dropdown-item" href="#">Charmy Papittoson</a>
+                                <a class="dropdown-item" href="#">Vanessa Enoteca</a>
+                                <a class="dropdown-item" href="#">Grey</a>
+                                <a class="dropdown-item" href="#">Gordon Agrippa</a>
+                                <a class="dropdown-item" href="#">Zora Ideale</a>
+                                <a class="dropdown-item" href="#">Henry Legolant</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Sword art online
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img
+                            src="../../css/images/5e1f777c3445b1b5dfa73f7625fdf5ee1553806234_full.png"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Reki Kawahara</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2002</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Kirito</a>
+                                <a class="dropdown-item" href="#">Asuna</a>
+                                <a class="dropdown-item" href="#">Leafa</a>
+                                <a class="dropdown-item" href="#">Sinon</a>
+                                <a class="dropdown-item" href="#">Yui</a>
+                                <a class="dropdown-item" href="#">Klein</a>
+                                <a class="dropdown-item" href="#">Agil</a>
+                                <a class="dropdown-item" href="#">Sillica</a>
+                                <a class="dropdown-item" href="#">Lisbeth</a>
+                                <a class="dropdown-item" href="#">Yuuki</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" id="favourite-card" style="width: 26rem; height: 40rem;">
+                <div class="card-header" id="anime-title">
+                    Shingeki no Kyojin
+                </div>
+
+                <div class="card-body" id="favourite-anime-card-body">
+                    <div class="col pb-1" id="anime-pic"><img
+                            src="../../css/images/attack-on-titan-season-3-part-2-visual-1162021-1280x0.jpeg"
+                            class="card-img-top ml-2">
+                    </div>
+
+                    <div class="col">
+                        <lable for="author">Author: Hajime Isayama</lable>
+                    </div>
+
+                    <div class="col">
+                        <lable for="start-year">Year of publish: 2009</lable>
+                    </div>
+
+                    <div class="d-inline-flex p-2">
+                        <div class="dropdown mr-2">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Choose favourite character
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Eren Yeager</a>
+                                <a class="dropdown-item" href="#">Mikasa Ackerman </a>
+                                <a class="dropdown-item" href="#">Armin Arlert</a>
+                                <a class="dropdown-item" href="#">Reiner Braun</a>
+                                <a class="dropdown-item" href="#">Sasha Blouse</a>
+                                <a class="dropdown-item" href="#">Ymir</a>
+                                <a class="dropdown-item" href="#">Erwin Smith </a>
+                                <a class="dropdown-item" href="#">Hange Zoë</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-primary" id="add-favourite">Add to favourite</a>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+
+
+    <ul class="list-group d-none" id="comment-template">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class ="title-info"></p>
+                   <p class="author-info"></p>
+                   
+                </div>
+                <div class="col-md-6">
+                        <p class ="start-year-info"></p>
+                        <p class="favourite-character-info"></p>
+                </div>
+                <div class="col-md-3">
+                    <button data-toggle="modal" data-target="#confirmDeleteModal" type="button"
+                        class="btn btn-danger remove-item">Unfavourites</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Unfavourite this anime</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">You used to like this anime a lot,are you sure about that?!
+                   </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button id="confirm-delete" type="button" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../../js/favAnime.js"></script>
+
+</body>
+
+</html>
